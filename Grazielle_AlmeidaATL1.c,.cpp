@@ -17,19 +17,14 @@ void construirNumeros(unsigned char V[]){
 	srand(time(NULL));
 	unsigned char qtd_numeros;
 	unsigned char i;
-	unsigned char random_num;
-	unsigned char temp;
 	unsigned char j;
-	unsigned char seed;
 	
 	qtd_numeros = 9;
 	V[0] = qtd_numeros;
 	
 	for(i = 1; i <= qtd_numeros; i++){
-		random_num = rand()%9+1;
-		V[i] =  random_num;
+		V[i] =  rand()%9+1;
 	}
-
 }
 
 void mostrarNumeros(unsigned char V[]){
