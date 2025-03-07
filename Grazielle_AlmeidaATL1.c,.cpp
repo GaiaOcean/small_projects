@@ -16,7 +16,6 @@
 void construirNumeros(unsigned char V[]){
 	srand(time(NULL));
 	unsigned char qtd_numeros;
-	unsigned char numeros[10];
 	unsigned char i;
 	unsigned char random_num;
 	unsigned char temp;
@@ -24,17 +23,11 @@ void construirNumeros(unsigned char V[]){
 	unsigned char seed;
 	
 	qtd_numeros = 9;
+	V[0] = qtd_numeros;
 	
 	for(i = 1; i <= qtd_numeros; i++){
 		random_num = rand()%9+1;
-		numeros[i] =  random_num;
-
-	}
-	numeros[0] = qtd_numeros ;
-
-	for(j = 0; j <= qtd_numeros; j++){
-
-		V[j] = numeros[j];
+		V[i] =  random_num;
 	}
 
 }
@@ -70,3 +63,8 @@ bool verificarRepetido(unsigned char V[]){
 	return has_duplicate;
 }
 
+int main(){
+	unsigned char V[10];
+	construirNumeros(V);
+	mostrarNumeros(V);
+}
