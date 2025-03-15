@@ -22,7 +22,11 @@ public class CalcCientifica
                     break;
                 case 2:
                     result = fatorial(operando);
-                    msg = "Fatorial de " + operando + " = " + result;
+                    if (result != -1) {  // Verifica se o fatorial foi válido
+                        msg = "Fatorial de " + operando + " = " + result;
+                    } else {
+                        msg = "Fatorial não pode ser calculado para números negativos";
+                    }
                     break;
                 case 3:
                     result = Math.sqrt(Double.parseDouble(operando));
@@ -42,6 +46,10 @@ public class CalcCientifica
         double result = 1;
         int n = Integer.parseInt(operando);
         
+        if(n < 0){
+            Saida.mostrarMsg("Operando inválido");
+            return -1;
+        }
         for(int i = n; i > 0; i--){
             result *= i;
         }
