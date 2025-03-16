@@ -47,6 +47,7 @@ public class CalcCientifica
         int n = Integer.parseInt(operando);
         
         if(n < 0){
+            Saida.mostrarMsg("Operando inválido");
             return -1;
         }
         for(int i = n; i > 0; i--){
@@ -63,6 +64,5 @@ public class CalcCientifica
         String choice = Entrada.retornaString();
         
         return choice;
-        
     }
 }

@@ -19,15 +19,21 @@ public class Aplicacao {
 
             // Instancia objeto para entrada de string (cria um objeto da classe)
             Entrada ent = new Entrada();
-
-            // Le os dados do teclado
-            String operando1 = ent.lerString("Forneca operando1: ");
-            String operador = ent.lerString("Forneca operador: ");
-            String operando2 = ent.lerString("Forneca operando2: ");
-
-            // Chamada do metodo local (calcular)
-            calcular(operando1, operador, operando2);
-
+            
+            String choice = ent.lerString("Digite 0 para acessar a calculadora Básica e 1 para a calculadora científica: ");
+            
+            if(choice.equals("0")){
+                     // Le os dados do teclado
+                String operando1 = ent.lerString("Forneca operando1: ");
+                String operador = ent.lerString("Forneca operador: ");
+                String operando2 = ent.lerString("Forneca operando2: ");
+    
+                // Chamada do metodo local (calcular)
+                calcular(operando1, operador, operando2);
+            }else if(choice.equals("1")){
+                String operando = ent.lerString("Forneca operando: ");
+                CalcCientifica.calcularOperacao(operando);
+            }   
         } else if (args.length == 3) { // parametros pelo SO (args)
             // Le os dados da linha de comando
             String operando1 = args[0];
@@ -37,7 +43,10 @@ public class Aplicacao {
             // Chamada do metodo local (calcular)
             calcular(operando1, operador, operando2);
 
-        } else {
+        }else if(args.length == 1){
+            String operando = args[0];
+            CalcCientifica.calcularOperacao(operando);
+        }else {
             //System.out.println("Parametros invalidos!!");
             Saida.mostrarMsg("Parametros invalidos!!");
         }
