@@ -105,45 +105,47 @@ void numeric_sequence(int A){
 		for(int i = 0; i < num_digits; i++){
 			B = B*10 + arr[i];
 		}
-		A = calculate_difference(B,C);
-		
-		num_digits = count_digits(A);
-		
-		if (num_digits == 3 && pf != 495) {
-            pf = 495;  
-        } else if (num_digits == 4 && pf != 6174) {
-            pf = 6174;  
+		 A = calculate_difference(B, C);
+
+        int new_digits = count_digits(A);
+        if (new_digits < num_digits) {
+            A *= 10;  
         }
+
+        num_digits = count_digits(A);
+        
+        pf = calculate_pf(A);
+        
         count += 1;
-		printf(",%d", A); 
+        printf(",%d", A);  
 	}
 	
-	printf( "    %d", count);
+	printf( "    %d\n", count);
 	
 	
 }
  
 int main(){
-//	FILE *pf = fopen("D:\\sequence\\entrada.txt", "r");
-//	
-//	if(pf == NULL){
-//		printf("Erro ao abrir arquivo");
-//		return -1;
-//	}
-//	int num_input = 0;
-//	fscanf(pf,"%d", &num_input);
-//	
-//	for(int i = 0; i < num_input; i++){
-//		int A;
-//		fscanf(pf, "%d", &A);
-//		numeric_sequence(A);
-//	}
-//	
-//	fclose(pf);
-//	
+	FILE *pf = fopen("D:\\sequence\\entrada.txt", "r");
+	
+	if(pf == NULL){
+		printf("Erro ao abrir arquivo");
+		return -1;
+	}
+	int num_input = 0;
+	fscanf(pf,"%d", &num_input);
+	
+	for(int i = 0 ; i < num_input; i++){
+		int A;
+		fscanf(pf, "%d", &A);
+		numeric_sequence(A);
+	}
+	
+	fclose(pf);
+	
 
-	int A = 195;
-	numeric_sequence(A);
+//	int A = 195;
+//	numeric_sequence(A);
 	return 0;
 
 }	
