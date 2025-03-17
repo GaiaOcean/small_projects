@@ -1,10 +1,7 @@
 #BlueJ class context
 comment0.target=CalcCientifica
-comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ CalcCientifica\ aqui.\r\n\ \r\n\ @author\ (seu\ nome)\ \r\n\ @version\ (um\ n\u00FAmero\ da\ vers\u00E3o\ ou\ uma\ data)\r\n
-comment1.params=operando
-comment1.target=void\ calcularOperacao(java.lang.String)
-comment2.params=operando
-comment2.target=double\ fatorial(java.lang.String)
-comment3.params=
-comment3.target=java.lang.String\ chooseOperation()
-numComments=4
+comment1.params=operando\ operador\ modoGrafico
+comment1.target=void\ calcular(java.lang.String,\ java.lang.String,\ boolean)
+comment2.params=operando\ modoGrafico
+comment2.target=double\ fatorial(java.lang.String,\ boolean)
+numComments=3

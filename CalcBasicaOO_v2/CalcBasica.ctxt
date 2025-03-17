@@ -1,10 +1,7 @@
 #BlueJ class context
 comment0.target=CalcBasica
-comment0.text=\r\n\ Classe\ para\ calculadora\ basica\ (4\ operacoes|)\r\n\ \r\n\ @author\ Julio\ Arakaki\ \r\n\ @version\ 20250310\r\n
-comment1.params=operando1\ operador\ operando2
-comment1.target=void\ calcular(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment0.text=\r\n\ Classe\ para\ calculadora\ basica\ (4\ operacoes|)\r\n\ \r\n\ @author\r\n\ @version\r\n
+comment1.params=operando1\ operador\ operando2\ useGUI
+comment1.target=void\ calcular(java.lang.String,\ java.lang.String,\ java.lang.String,\ boolean)
 comment1.text=\r\n\ M\u00E9todo\ calcular\r\n\r\n\ @param\ operando1\ String\r\n\ @param\ operador\ String\r\n\ @param\ operando2\ String\r\n
-comment2.params=str
-comment2.target=boolean\ isNumeric(java.lang.String)
-comment2.text=\r\n\ Metodo\ isNumeric\ -\ verifica\ se\ a\ string\ eh\ numerica\r\n\ Parametros\:\r\n\ \ \ \ \ \ \ \ \ String\ str\ -\ string\ a\ ser\ verificada\r\n\ Retorno\:\r\n\ \ \ \ \ \ \ \ \ boolean\ -\ true\:\ a\ string\ eh\ numerica\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\ false\:\ a\ string\ nao\ eh\ numerica\r\n
-numComments=3
+numComments=2

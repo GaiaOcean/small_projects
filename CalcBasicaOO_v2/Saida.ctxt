@@ -1,7 +1,6 @@
 #BlueJ class context
 comment0.target=Saida
-comment0.text=\r\n\ Classe\ principal.\r\n\ \r\n\ @author\ Julio\ Arakaki\ \r\n\ @version\ 20250310\r\n
-comment1.params=msg
-comment1.target=void\ mostrarMsg(java.lang.String)
-comment1.text=\r\n\ M\u00E9todo\ mostrarMsg\r\n\r\n\ @param\ msg\ String\ a\ ser\ apresentado\ na\ console\r\n
+comment1.params=msg\ useGUI
+comment1.target=void\ mostrarMsg(java.lang.String,\ boolean)
+comment1.text=\r\n\ M\u00E9todo\ mostrarMsg\r\n\r\n\ @param\ msg\ String\ a\ ser\ apresentado\ na\ console\r\n\ @param\ useGUI\ verifica\ se\ o\ usuario\ escolheu\ ou\ n\u00E3o\ usar\ a\ janela\ grafica\r\n
 numComments=2
