@@ -2,8 +2,8 @@
 /**
  * Classe para calculadora basica (4 operacoes|)
  * 
- * @author Julio Arakaki 
- * @version 20250310
+ * @author
+ * @version
  */
 public class CalcBasica {
     /**
@@ -13,7 +13,7 @@ public class CalcBasica {
      * @param operador String
      * @param operando2 String
      */
-    public void calcular(String operando1, String operador, String operando2){ 
+    public void calcular(String operando1, String operador, String operando2, boolean useGUI){ 
 
         // Para armazenar resultado
         double result = 0;
@@ -21,7 +21,6 @@ public class CalcBasica {
         // Para armazenar uma msg
         String msg = "";
 
-        if(isNumeric(operando1) && isNumeric(operando2)){ // Verifica se eh numerico
             // Realiza as 4 operacoes
             switch (operador){
                 case "-":
@@ -44,38 +43,7 @@ public class CalcBasica {
                     msg = "Operador invalido!!";
             }    
 
-        } else {
-            msg = "Operando nao numerico!!";
-
-        }
-        Saida.mostrarMsg(msg);
-        //System.out.println(msg);
-    }
-
-    /**
-     * Metodo isNumeric - verifica se a string eh numerica
-     * Parametros:
-     *         String str - string a ser verificada
-     * Retorno:
-     *         boolean - true: a string eh numerica
-     *                  - false: a string nao eh numerica
-     */
-    public boolean isNumeric(String str) {
-        if (str == null || str.length() == 0) {
-            return false;
-        }
-
-        boolean foundDecimal = false;
-        for (char c : str.toCharArray()) { // percorre a string
-            if (!Character.isDigit(c)) { // verifica se eh digito
-                if (c == '.' && !foundDecimal) { // verifica se existe um unico ponto
-                    foundDecimal = true;
-                } else {
-                    return false;
-                }
-            }
-        }            
-        return true;
+        Saida.mostrarMsg(msg,useGUI);
     }
 }
 

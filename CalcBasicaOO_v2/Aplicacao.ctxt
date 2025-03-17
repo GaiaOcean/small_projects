@@ -1,10 +1,11 @@
 #BlueJ class context
 comment0.target=Aplicacao
-comment0.text=\r\n\ Classe\ principal.\r\n\ \r\n\ @author\ Julio\ Arakaki\ \r\n\ @version\ 20250310\r\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 comment1.text=\r\n\ M\u00E9todo\ main\ -\ principal\:\ inicia\ um\ programa\ em\ java\r\n\r\n\ @param\ args\ -\ vetor\ de\ string\ (recebe\ dados\ do\ SO)\r\n
-comment2.params=s1\ s2\ s3
-comment2.target=void\ calcular(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=s1\ s2\ s3\ useGUI
+comment2.target=void\ calcularBasica(java.lang.String,\ java.lang.String,\ java.lang.String,\ boolean)
 comment2.text=\r\n\ M\u00E9todo\ calcular\r\n\r\n\ @param\ s1\ -\ operando1\r\n\ @param\ s2\ -\ operador\r\n\ @param\ s3\ -\ operando2\r\n
-numComments=3
+comment3.params=s1\ s2\ useGUI
+comment3.target=void\ calcularCientifica(java.lang.String,\ java.lang.String,\ boolean)
+numComments=4
