@@ -3,9 +3,6 @@ import javax.swing.JOptionPane;
 
 /**
  * Classe Entrada - realiza e valida todas as operações de entrada da aplicação.
- * 
- * @author 
- * @version 
  */
 
 public class Entrada {
@@ -80,14 +77,32 @@ public class Entrada {
         // Retorna a string lida
         return s;
     }
-    
+    /**
+     * Metodo lerDados - verifica em qual modo deve-se mostrar a mensagem
+     * Parametros:
+     *         String mensagem - texto a ser displayed
+     * Retorno:
+     *         String  -  retorna a mensagem em modo gráfico ou texto
+     */
     public String lerDados(String mensagem){
+        
         if(this.getModoGrafico()){
-            return JOptionPane.showInputDialog(mensagem);
+            return EntradaGrafica.showInput(mensagem);
         } else {
             return lerString(mensagem);
         }
     }
+    
+    /**
+     * Metodo verificarOperando - verifica se o operando passado é válido
+     * Parametros:
+     *         int pos - qual posição da equação o elemento se encontra sendo:
+     *                  1: operando 1
+     *                  2: operador
+     *                  3: operando 2
+     * Retorno:
+     *         String operando -  retorna o número a ser utilizando no calculo
+     */
     
     private String verificarOperando(int pos){
         String operando = lerDados("Digite o " + pos + " operando: ");
@@ -99,7 +114,12 @@ public class Entrada {
         
         return operando;
     }
-    
+     /**
+     * Metodo verificarOperadorCalcBasica - mostra mensagem de erro e ler dados enquanto o usuário não passar um operador válido
+     * 
+     * Retorno:
+     *         String - número a ser calculado
+     */
     private String verificarOperadorCalcBasica() {
         String operador = lerDados(MSG_OPERADORES_BASICA);
 
@@ -110,11 +130,25 @@ public class Entrada {
 
         return operador;
     }
-    
+    /**
+     * Metodo validarOperadorCalcCientifica - verifica se o operador passado é válido
+     * Parametros:
+     *         String operador - Tipo de Operação matemática
+     * Retorno:
+     *         boolean - true: é igual a uma das operações da calculadora cientifica
+     *                  - false: não é igual a nenhuma das operações da calc cientifíca
+     */
     private boolean validarOperadorCalcBasica(String operador){
         return operador.equals("+") || operador.equals("-") || operador.equals("*") || operador.equals("/");
 
     }
+    
+    /**
+     * Metodo verificarOperadorCalcCientifica - mostra mensagem de erro e ler dados enquanto o usuário não passar um operador válido
+     * 
+     * Retorno:
+     *         String - número a ser calculado
+     */
     
     private String verificarOperadorCalcCientifica() {
         String operador = lerDados(MSG_OPERADORES_CIENTIFICA);
@@ -127,6 +161,15 @@ public class Entrada {
         return operador;
     }
     
+    /**
+     * Metodo validarOperadorCalcCientifica - verifica se o operador passado é válido
+     * Parametros:
+     *         String operador - Tipo de Operação matemática
+     * Retorno:
+     *         boolean - true: é igual a uma das operações da calculadora cientifica
+     *                  - false: não é igual a nenhuma das operações da calc cientifíca
+     */
+ 
     private boolean validarOperadorCalcCientifica(String operador){
         return operador.equals("1") || operador.equals("2") || operador.equals("3");
     }

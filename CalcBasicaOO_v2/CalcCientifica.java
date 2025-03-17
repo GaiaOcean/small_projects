@@ -1,5 +1,12 @@
 public class CalcCientifica
-{
+{   
+     /**
+     * Metodo Calcular - Realiza operações de seno,fatorial e raíz quadrada dependendo da escolha do usuário
+     * Parametros:
+     *         String operando - número que deseja realizar algumas das operações supracitadas
+     *         String operador - Tipo de Operação matemática
+     *         Boolean modoGrafico - modo de display das mensagens
+     */
     public void calcular(String operando, String operador, boolean modoGrafico){
         
         double result = 0;
@@ -29,6 +36,14 @@ public class CalcCientifica
         Saida.mostrarMsg(msg,modoGrafico);
     }
     
+     /**
+     * Metodo fatorial - calcula e retorna o fatorial de um dado número
+     * Parametros:
+     *         String operando - número a ser calculado o fatorial
+     *         Boolean modoGrafico - modo de display das mensagens
+     * Retorno:
+     *         double - fatorial calculado
+     */
     private static double fatorial(String operando, boolean modoGrafico){
         double result = 1;
         int n = Integer.parseInt(operando);

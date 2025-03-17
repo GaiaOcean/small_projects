@@ -2,6 +2,8 @@
 comment0.target=CalcCientifica
 comment1.params=operando\ operador\ modoGrafico
 comment1.target=void\ calcular(java.lang.String,\ java.lang.String,\ boolean)
+comment1.text=\r\n\ Metodo\ Calcular\ -\ Realiza\ opera\u00E7\u00F5es\ de\ seno,fatorial\ e\ ra\u00EDz\ quadrada\ dependendo\ da\ escolha\ do\ usu\u00E1rio\r\n\ Parametros\:\r\n\ \ \ \ \ \ \ \ \ String\ operando\ -\ n\u00FAmero\ que\ deseja\ realizar\ algumas\ das\ opera\u00E7\u00F5es\ supracitadas\r\n\ \ \ \ \ \ \ \ \ String\ operador\ -\ Tipo\ de\ Opera\u00E7\u00E3o\ matem\u00E1tica\r\n\ \ \ \ \ \ \ \ \ Boolean\ modoGrafico\ -\ modo\ de\ display\ das\ mensagens\r\n
 comment2.params=operando\ modoGrafico
 comment2.target=double\ fatorial(java.lang.String,\ boolean)
+comment2.text=\r\n\ Metodo\ fatorial\ -\ calcula\ e\ retorna\ o\ fatorial\ de\ um\ dado\ n\u00FAmero\r\n\ Parametros\:\r\n\ \ \ \ \ \ \ \ \ String\ operando\ -\ n\u00FAmero\ a\ ser\ calculado\ o\ fatorial\r\n\ \ \ \ \ \ \ \ \ Boolean\ modoGrafico\ -\ modo\ de\ display\ das\ mensagens\r\n\ Retorno\:\r\n\ \ \ \ \ \ \ \ \ double\ -\ fatorial\ calculado\r\n
 numComments=3

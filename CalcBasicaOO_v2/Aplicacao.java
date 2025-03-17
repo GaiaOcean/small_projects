@@ -1,7 +1,7 @@
 /**
  * Classe principal.
  * 
- * @author 
+ * @author: Grazielle Batista de Almeida e Luana Gabrielle Rodrigues Macedo 
  * @version 
  */
 
