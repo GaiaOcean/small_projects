@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Entrada
-comment0.text=\r\n\ Classe\ principal.\r\n\ \r\n\ @author\ Julio\ Arakaki\ \r\n\ @version\ 20250310\r\n
-comment1.params=mensagem
-comment1.target=java.lang.String\ lerString(java.lang.String)
-comment1.text=\r\n\ M\u00E9todo\ lerString\ -\ le\ uma\ string\ pelo\ teclado\ e\ retorna\r\n\r\n\ @param\ mensagem\ Mesnsage\ na\ console\r\n\ @return\ s\ string\ lida\r\n
-comment2.params=
-comment2.target=java.lang.String\ retornaString()
-numComments=3
