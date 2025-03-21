@@ -62,9 +62,9 @@ int main(){
     }  // end for lin
 	
 	if(verificarRepetido(geral))
-		printf("sim");
+		printf("INCORRETO");
 	else
-		printf("nao");
+		printf("CORRETO");
 		
 	return 0;
 }
@@ -78,10 +78,9 @@ bool verificarRepetido(unsigned char geral[10][10]){
 	
 	tem_duplicata = FALSE;
 	l = 1;
-	c = 1;
-	i = 1;
 	
 	while(l <= 9 && tem_duplicata != TRUE){
+		c = 1;
 		while(c < 9 && tem_duplicata != TRUE){
 			i = c  + 1;
 			while(i <= 9 && tem_duplicata != TRUE){
@@ -96,8 +95,9 @@ bool verificarRepetido(unsigned char geral[10][10]){
 		l = l + 1;
 	}
 	c = 1;
-	l = 1;
+
 	while(c <= 9 && tem_duplicata != TRUE){
+		l = 1;
 		while(l < 9 && tem_duplicata != TRUE){
 			i = l + 1;
 			while(i <= 9 && tem_duplicata!= TRUE){
