@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=CadAluno
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ CadAluno\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=qtdAlunoCadastrado\ aluno
+comment1.target=void\ inserirAluno(int,\ Aluno[])
+comment2.params=qtdAlunoCadastrado\ ra\ aluno
+comment2.target=void\ removerAluno(int,\ java.lang.String,\ Aluno[])
+comment3.params=qtdAlunoCadastrado\ aluno
+comment3.target=void\ mostrarAluno(int,\ Aluno[])
+comment4.params=
+comment4.target=int\ getQtdAlunos()
+numComments=5
