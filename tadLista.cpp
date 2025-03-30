@@ -41,6 +41,7 @@ void mostrarLista(Lista lista){
 	printf("\n");
 }
 
+
 Lista buscarDuplicatas(Lista lista,unsigned char elemento){
 	Lista posicoes;
 	posicoes.tam = 0;
@@ -78,6 +79,23 @@ Lista eliminarElementoCopy(Lista lista, unsigned char elemento){
 	}
 	return newList;
 }
+
+void removerTdsDuplicatas(Lista* lista) {
+    int i, k, j;
+    for(i = 0; i < lista->tam; i++) {
+        for(j = i + 1; j < lista->tam; j++) {
+            if(lista->Tabela[i] == lista->Tabela[j]) {
+                for(k = j; k < lista->tam - 1; k++) {
+                    lista->Tabela[k] = lista->Tabela[k + 1];
+                }
+                lista->tam--;
+                j--;
+            }
+        }
+    }
+}
+
+
 int main(){
 	Lista lista;
 	lista = criarTabela(lista);
@@ -94,5 +112,8 @@ int main(){
 	printf("\n");
 	Lista newList = eliminarElementoCopy(lista,elemento);
 	mostrarLista(newList);
+	printf("\n");
+	removerTdsDuplicatas(&lista);
+	mostrarLista(lista);
 	
 }
