@@ -54,15 +54,45 @@ Lista buscarDuplicatas(Lista lista,unsigned char elemento){
 	return posicoes;
 }
 
+void eliminarElemento(Lista* lista, unsigned char elemento){
+	int i;
+	int j = 0;
+	
+	for(i = 0; i <= lista->tam; i++){
+		if(lista->Tabela[i] != elemento){
+			lista->Tabela[j++] = lista->Tabela[i];
+		}
+	}
+	lista->tam = j - 1;
+}
+
+Lista eliminarElementoCopy(Lista lista, unsigned char elemento){
+	Lista newList;
+	newList.tam = 0;
+	
+	for(int i = 0; i < lista.tam; i++){
+		if(lista.Tabela[i] != elemento){
+			newList.Tabela[newList.tam] = lista.Tabela[i];
+			++newList.tam;
+		}
+	}
+	return newList;
+}
 int main(){
 	Lista lista;
 	lista = criarTabela(lista);
 	mostrarLista(lista);
-	unsigned char elemento = 14;
+	unsigned char elemento = 3;
 	int posicao = buscar(lista,elemento);
 	printf("%d", posicao);
 	printf("\n");
 	Lista posicoes = buscarDuplicatas(lista,elemento);
 	mostrarLista(posicoes);
+	printf("\n");
+	eliminarElemento(&lista,elemento);
+	mostrarLista(lista);
+	printf("\n");
+	Lista newList = eliminarElementoCopy(lista,elemento);
+	mostrarLista(newList);
 	
 }
