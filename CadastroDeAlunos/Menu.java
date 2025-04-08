@@ -8,14 +8,21 @@ import javax.swing.JOptionPane;
 public class Menu
 {
    public static void main(String[] Args){
+       Entrada ent = new Entrada();
+       if(Args.length != 0){
+           ent.definirModo(Args[0]);
+       } else {
+          ent.definirModo("default"); 
+       }
+       
        CadAluno cad = new CadAluno();
        int qtdAlunos = cad.getQtdAlunos();
        Aluno[] aluno = new Aluno[qtdAlunos];
        int qtdAlunoCadastrado = 0;
-       
+        
        while(true){
            //String options = "Selecione uma opção: \n" + "1.Cadastrar um aluno\n" + "2.Remover um aluno\n"+"3.Mostrar alunos cadastrados\n";
-           int choice = Integer.parseInt(JOptionPane.showInputDialog("Selecione uma Opção: \n" + "1.Cadastrar um Aluno\n" +
+           int choice = Integer.parseInt(ent.lerDados("Selecione uma Opção: \n" + "1.Cadastrar um Aluno\n" +
                                "2.Remover um Aluno\n"+"3.Mostrar Alunos Cadastrados\n" + "4.Sair do Programa"));
            
            switch(choice){
@@ -24,22 +31,22 @@ public class Menu
                         cad.inserirAluno(qtdAlunoCadastrado, aluno);
                         qtdAlunoCadastrado++;  // Increment the counter after adding a student
                     } else {
-                        JOptionPane.showMessageDialog(null, "Não há mais espaço para cadastrar novos alunos.");
+                        Saida.mostrarMsg("Não há mais espaço para cadastrar novos alunos.", ent.getModoGrafico());
                     }
                     break;
                case 2:
-                   String ra = JOptionPane.showInputDialog("Forneça o ra do aluno que deseja remover");
+                   String ra = ent.validarRa("Forneça o ra do aluno que deseja remover");
                    cad.removerAluno(qtdAlunoCadastrado,ra,aluno);
                    break;
                case 3:
                    cad.mostrarAluno(qtdAlunoCadastrado,aluno);
                    break;
                case 4:
-                   JOptionPane.showMessageDialog(null,"Saindo do programa");
+                   Saida.mostrarMsg("Saindo do programa", ent.getModoGrafico());
                    System.exit(0);
                    break;
                default:
-                   JOptionPane.showMessageDialog(null,"Opção inválida");
+                   Saida.mostrarMsg("Opção inválida", ent.getModoGrafico());
                    break;
            }
                

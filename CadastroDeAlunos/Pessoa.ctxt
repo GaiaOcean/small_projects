@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Pessoa
 comment0.text=\r\n\ Implementa\ um\ "template"\ (tipo\ de\ dados)\ para\ criar\ \r\n\ objetos\ Pessoa.\r\n\ \r\n\ @author\ Julio\ Arakaki\r\n\ @version\ 20250326\r\n
-comment1.params=nome\ idade\ id
+comment1.params=nome\ idade\ rg
 comment1.target=Pessoa(java.lang.String,\ int,\ java.lang.String)
 comment1.text=\r\n\ Construtor.\ "constroi\ uma\ pessoa".\ Metodo\ chamado\ na\ criacao\ \r\n\ de\ um\ objeto\ da\ classe\r\n\ @param\ nome\ (NomePessoa)\ Nome\ da\ pessoa\r\n\ @param\ idade\ (int)\ Idade\ da\ pessoa\r\n\ @param\ id\ (String)\ Identificacao\ da\ pessoa\r\n
 comment10.params=
@@ -14,7 +14,7 @@ comment2.params=nome
 comment2.target=void\ setNome(java.lang.String)
 comment3.params=idade
 comment3.target=void\ setIdade(int)
-comment4.params=id
+comment4.params=rg
 comment4.target=void\ setId(java.lang.String)
 comment5.params=
 comment5.target=java.lang.String\ getNome()
@@ -23,7 +23,7 @@ comment6.params=
 comment6.target=int\ getIdade()
 comment6.text=\r\n\ Retorna\ a\ idade\ da\ pessoa\r\n\r\n\ @return\ (int)\ idade\ da\ pessoa\r\n
 comment7.params=
-comment7.target=java.lang.String\ getId()
+comment7.target=java.lang.String\ getRg()
 comment7.text=\r\n\ Retorna\ a\ identificacao\ da\ pessoa\r\n\r\n\ @return\ (String)\ identificacao\ da\ pessoa\r\n
 comment8.params=
 comment8.target=int\ getQtdePalavras()

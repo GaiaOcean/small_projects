@@ -7,71 +7,98 @@ import javax.swing.JOptionPane;
  */
 public class CadAluno
 {
-   public void inserirAluno(int qtdAlunoCadastrado, Aluno[] aluno){ //recebe um array e a qtd de alunos a pessoa ja cadastrou
-        String nome = JOptionPane.showInputDialog("Forneca o nome do aluno: ");
-        
-        // Entrada da idade do aluno (atraves do teclado)
-        int idade = Integer.parseInt(JOptionPane.showInputDialog("Forneca a idade do aluno: "));
     
+   Entrada ent = new Entrada();
+   
+   public void inserirAluno(int qtdAlunoCadastrado, Aluno[] aluno){ //recebe um array e a qtd de alunos a pessoa ja cadastrou
+        String nome = ent.lerDados("Forneca o nome do aluno: ");
+        // Entrada da idade do aluno (atraves do teclado)
+        int idade =  ent.validarNumero("Forneça a idade do aluno: ");
+                 
         // Entrada de uma identificacao do aluno (atraves do teclado)
-        String rg = JOptionPane.showInputDialog("Forneca o rg do aluno : ");
+        String rg = ent.lerDados("Forneca o rg do aluno : ");
     
         // Entrada da ra do aluno (atraves do teclado)
-        String ra = JOptionPane.showInputDialog("Forneca o ra do aluno: ");
+        String ra = ent.validarRa("Forneca o ra do aluno: ");
     
         // Entrada do curso do aluno (atraves do teclado)
-        String curso = JOptionPane.showInputDialog("Forneca o curso do aluno: ");
+        String curso = ent.lerDados("Forneca o curso do aluno: ");
     
         // Entrada da idade do aluno (atraves do teclado)
-        int periodo = Integer.parseInt(JOptionPane.showInputDialog("Forneca o periodo do aluno: "));
+        int periodo = ent.validarNumero("Forneca o periodo do aluno: ");
             
         aluno[qtdAlunoCadastrado] = new Aluno(nome,idade,rg,ra,curso,periodo);
-        JOptionPane.showMessageDialog(null,"Aluno cadastrado com sucesso");   
+        Saida.mostrarMsg("Aluno cadastrado com sucesso", ent.getModoGrafico());   
    }
    public void removerAluno(int qtdAlunoCadastrado,String ra, Aluno[] aluno){
        if(qtdAlunoCadastrado == 0){
-           JOptionPane.showMessageDialog(null,"Não exitem alunos cadastrados");
+           Saida.mostrarMsg("Não exitem alunos cadastrados", ent.getModoGrafico());
            return;
        }
        for(int i = 0; i < aluno.length;i++){
            if(ra != null && aluno[i].getRa().equals(ra)){
                aluno[i] = null;
-               JOptionPane.showMessageDialog(null,"Aluno removido com sucesso");               
+               Saida.mostrarMsg("Aluno removido com sucesso", ent.getModoGrafico());               
                return;
            }
        }
-      
-       
    }
    public void mostrarAluno(int qtdAlunoCadastrado, Aluno[] aluno){
-       String lista = "";
-       
 
-       for(int i = 0;i <qtdAlunoCadastrado;i++){
-           if(aluno[i] != null){
-               lista += aluno[i].toString()+ "\n\n";
-           }
-       }
+       String lista = mostrarArray(qtdAlunoCadastrado,aluno);
+
        if(!lista.isEmpty()){
-           JOptionPane.showMessageDialog(null,lista,"Alunos Cadastrados", JOptionPane.INFORMATION_MESSAGE);
+
+          Saida.mostrarMsg(lista, ent.getModoGrafico());
+
        }else{
-           JOptionPane.showMessageDialog(null,"Não existe alunos cadastrado");
+
+           Saida.mostrarMsg("Não existe alunos cadastrado", ent.getModoGrafico());
+
        }
-       
+
    }
+
    public int getQtdAlunos(){
-        
+
         boolean isValid = false;
+
         int qtdAlunos = 0;
+
         while(!isValid){
-             qtdAlunos = Integer.parseInt(JOptionPane.showInputDialog("Forneca a quantidade de alunos: "));
+
+             qtdAlunos = ent.validarNumero("Forneca a quantidade de alunos: ");
+
              if(qtdAlunos > 0){
+
                  isValid = true;
+
              }
-             
+
         }
-        
+
         return qtdAlunos;
+
    }
-  
+
+   public String mostrarArray(int qtdAlunoCadastrado, Aluno[] aluno){
+
+       String lista = "";
+
+         for(int i = 0;i <qtdAlunoCadastrado;i++){
+
+           if(aluno[i] != null){
+
+               lista += aluno[i].toString()+ "\n\n";
+
+           }
+
+       }
+
+       return lista;
+
+    }
+    
 }
+  
+

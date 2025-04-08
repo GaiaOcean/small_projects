@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=EntradaGrafica
+comment1.params=msg
+comment1.target=java.lang.String\ showInput(java.lang.String)
+numComments=2

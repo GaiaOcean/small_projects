@@ -13,7 +13,7 @@ public class Pessoa {
     // ou Atributos
     private NomePessoa nome; // Nome a pessoa
     private int idade;       // Idade da pessoa
-    private String id;       // Identificacao da pessoa 
+    private String rg;       // Identificacao da pessoa 
 
     /**
      * Construtor. "constroi uma pessoa". Metodo chamado na criacao 
@@ -22,10 +22,10 @@ public class Pessoa {
      * @param idade (int) Idade da pessoa
      * @param id (String) Identificacao da pessoa
      */
-    public Pessoa(String nome, int idade, String id) {
+    public Pessoa(String nome, int idade, String rg) {
         setNome(nome);
         setIdade(idade);
-        setId(id);
+        setId(rg);
     }
 
     private void setNome(String nome){
@@ -36,8 +36,8 @@ public class Pessoa {
         this.idade = idade;
     }
 
-    private void setId(String id){
-        this.id = id;
+    private void setId(String rg){
+        this.rg = rg;
     }
 
     /**
@@ -63,8 +63,8 @@ public class Pessoa {
      *
      * @return (String) identificacao da pessoa
      */
-    public String getId(){
-        return(this.id);
+    public String getRg(){
+        return(this.rg);
     }
 
     /**
@@ -102,7 +102,7 @@ public class Pessoa {
         String str = " ";
         str = str + "Nome: " + getNome();
         str = str +  "\nIdade: " + getIdade();
-        str = str + "\nId: " + getId();
+        str = str + "\nRg: " + getRg();
         return str;
     }
 }

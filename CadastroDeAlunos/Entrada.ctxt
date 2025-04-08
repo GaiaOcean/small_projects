@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Entrada
+comment1.params=state
+comment1.target=void\ setModoGrafico(boolean)
+comment2.params=
+comment2.target=boolean\ getModoGrafico()
+comment3.params=modo
+comment3.target=void\ definirModo(java.lang.String)
+comment4.params=mensagem
+comment4.target=java.lang.String\ lerString(java.lang.String)
+comment4.text=\r\n\ M\u00E9todo\ lerString\ -\ le\ uma\ string\ pelo\ teclado\ e\ retorna\r\n\r\n\ @param\ mensagem\ Mesnsage\ na\ console\r\n\ @return\ s\ string\ lida\r\n
+comment5.params=mensagem
+comment5.target=java.lang.String\ lerDados(java.lang.String)
+comment5.text=\r\n\ Metodo\ lerDados\ -\ verifica\ em\ qual\ modo\ deve-se\ mostrar\ a\ mensagem\r\n\ Parametros\:\r\n\ \ \ \ \ \ \ \ \ String\ mensagem\ -\ texto\ a\ ser\ displayed\r\n\ Retorno\:\r\n\ \ \ \ \ \ \ \ \ String\ \ -\ \ retorna\ a\ mensagem\ em\ modo\ gr\u00E1fico\ ou\ texto\r\n
+comment6.params=texto
+comment6.target=boolean\ isNumeric(java.lang.String)
+comment7.params=msg
+comment7.target=int\ validarNumero(java.lang.String)
+comment8.params=msg
+comment8.target=java.lang.String\ validarRa(java.lang.String)
+numComments=9

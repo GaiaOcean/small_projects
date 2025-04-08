@@ -9,4 +9,6 @@ comment3.params=qtdAlunoCadastrado\ aluno
 comment3.target=void\ mostrarAluno(int,\ Aluno[])
 comment4.params=
 comment4.target=int\ getQtdAlunos()
-numComments=5
+comment5.params=qtdAlunoCadastrado\ aluno
+comment5.target=java.lang.String\ mostrarArray(int,\ Aluno[])
+numComments=6
