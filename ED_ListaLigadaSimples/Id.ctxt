@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Id
+comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ Id\ aqui.\r\n\ \r\n\ @author\ (seu\ nome)\ \r\n\ @version\ (um\ n\u00FAmero\ da\ vers\u00E3o\ ou\ uma\ data)\r\n
+comment1.params=
+comment1.target=int\ getId()
+comment2.params=id
+comment2.target=void\ setId(int)
+comment3.params=
+comment3.target=void\ incrementarId()
+comment4.params=
+comment4.target=void\ decrementaId()
+numComments=5

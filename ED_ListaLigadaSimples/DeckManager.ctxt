@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=DeckManager
+comment1.params=
+comment1.target=DeckManager()
+comment2.params=deckName
+comment2.target=void\ addDeck(java.lang.String)
+comment3.params=fileName
+comment3.target=void\ saveDeckNamesToFile(java.lang.String)
+comment4.params=fileName
+comment4.target=void\ loadDeckNamesFromFile(java.lang.String)
+comment5.params=
+comment5.target=java.util.List\ getDeckNames()
+numComments=6

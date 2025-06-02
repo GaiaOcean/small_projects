@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Armazenagem
+comment1.params=palavra\ traducao\ deck
+comment1.target=Armazenagem(ListaPalavra,\ ListaTraducao,\ DeckManager)
+comment2.params=nomeArquivo
+comment2.target=void\ salvarTxt(java.lang.String)
+comment3.params=nomeArquivo
+comment3.target=boolean\ carregarTxt(java.lang.String)
+numComments=4
